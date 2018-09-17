@@ -20,24 +20,24 @@ app.get('/home', function (req, res) {
 
 /////////////student///////////////////////
 app.get('/students',function(req,res){
-connection.connect()
+//connection.connect()
 connection.query('select * from students', function (err, rows, fields) {
   if (err) throw err
     res.render('pages/students',{students : rows})
   console.log('The solution is: ', rows[0].solution)
 })
-connection.end()
+//connection.end()
 });
 ////////////////////////subject//////////////////////////
 app.get('/subjects',function(req,res){
   
-    connection.connect()
+    //connection.connect()
     connection.query('select * from subjects', function (err, rows, fields) {
       if (err) throw err
         res.render('pages/subjects',{subjects : rows})
       console.log('The solution is: ', rows[0].solution)
     })
-    connection.end()
+  //  connection.end()
     });
     
 

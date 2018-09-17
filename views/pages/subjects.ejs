@@ -10,12 +10,12 @@
         </tr>
     </thead>
     <tbody>
-    <% subjects.forEach(function(subjects) { %>
+    <% subjects.forEach(function(subject) { %>
         <tr>
-        <td scope="row"><%= subjects.code %></td>
-            <td><%= subjects.title %></td>
-            <td><%= subjects.credits %></td>
-            <td><%= subjects.section %></td>
+        <td scope="row"><%= subject.code %></td>
+            <td><%= subject.title %></td>
+            <td><%= subject.credits %></td>
+            <td><%= subject.section %></td>
         </tr>
         <% });%>
     </tbody>
