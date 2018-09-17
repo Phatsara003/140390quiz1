@@ -10,12 +10,12 @@
         </tr>
     </thead>
     <tbody>
-    <% students.forEach(function(students) { %>
+    <% students.forEach(function(student) { %>
         <tr>
         <td scope="row"><%= student.sid %></td>
-            <td><%= students.title %></td>
-            <td><%= students.firstname %></td>
-            <td><%= students.lastname %></td>
+            <td><%= student.title %></td>
+            <td><%= student.firstname %></td>
+            <td><%= student.lastname %></td>
         </tr>
         <% });%>
     </tbody>
