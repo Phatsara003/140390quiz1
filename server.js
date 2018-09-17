@@ -1,20 +1,25 @@
 var express = require('express')
 var app = express();
-app.set('view engine', 'ejs');
-
-app.get('/home', function (req, res) {
-    res.render('pages/home');
-});
-
 var mysql = require('mysql')
 var connection = mysql.createConnection({
   host     : 'www.db4free.net',
   user     : 's140390',
   password : 'abc123**',
-  database : 'db140390'
+  database : 'db140390'});
+app.set('view engine', 'ejs');
+
+
+app.get('/', function (req, res) {
+    res.render('pages/home');
 });
+app.get('/home', function (req, res) {
+    res.render('pages/home');
+});
+
+
+
+/////////////student///////////////////////
 app.get('/students',function(req,res){
-  
 connection.connect()
 connection.query('select * from students', function (err, rows, fields) {
   if (err) throw err
@@ -23,7 +28,7 @@ connection.query('select * from students', function (err, rows, fields) {
 })
 connection.end()
 });
-
+////////////////////////subject//////////////////////////
 app.get('/subjects',function(req,res){
   
     connection.connect()
