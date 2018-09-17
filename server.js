@@ -1,16 +1,10 @@
-var mysql = require('mysql')
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'dbuser',
-  password : 's3kreee7',
-  database : 'my_db'
+var mysql = require('express')
+var app = express();
+app.set('view engine', 'ejs');
+
+app.get('/home', function (req, res) {
+    res.render('pages/home');
 });
-connection.connect()
 
-connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
-  if (err) throw err
-
-  console.log('The solution is: ', rows[0].solution)
-})
-
-connection.end()
+console.log('App is running at http://localhost:8080');
+app.listen(8080);

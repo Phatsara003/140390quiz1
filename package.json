@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Phatsara003/140390quiz1#readme",
   "dependencies": {
     "ejs": "^2.6.1",
+    "express": "^4.16.3",
     "mysql": "^2.16.0"
   }
 }
